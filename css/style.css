@@ -1,0 +1,300 @@
+/* HAPUS class ini kalau nggak dipakai */
+.navbar-container {
+  /* Bisa dihapus jika nav tidak dibungkus */
+  display: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #290036;
+  z-index: 1000;
+  padding: 10px 30px;
+
+  display: flex;
+  justify-content: flex-end; /* Biarkan dia mepet kanan */
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: auto; /* Paksa dorong ke kanan */
+}
+
+nav .nav-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: #a472ff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #111;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto; /* Supaya hamburger juga di kanan pas mobile */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #1a1a1a, #4b0082);
+  color: #f0f0f0;
+}
+
+header {
+  background: linear-gradient(to right, #000000, #4b0082);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+nav {
+  background: #2e003e;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  margin-top: 80px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.about div {
+  flex: 1; /* biar ambil ruang setengah */
+}
+.about img {
+  flex: 1;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.about img:hover {
+  transform: scale(1.05);
+}
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover scaling */
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons .fa-envelope {
+  color: #d44638;
+}
+.social-icons .fa-linkedin {
+  color: #0077b5;
+}
+.social-icons .fa-github {
+  color: #333;
+}
+.social-icons .fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+}
+.skills li,
+.project,
+.contact p {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills li:hover,
+.project:hover,
+.contact p:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.skills i {
+  font-size: 18px;
+  color: #bb86fc;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.project {
+  flex: 1 1 300px;
+}
+.project a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.certificates-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificates-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cert-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cert-scroll img {
+  max-height: 200px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cert-scroll img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.experience-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.experience-section h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.experience-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Ini penting biar semua box ke tengah */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.experience-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.experience-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.experience-box p {
+  font-size: 15px;
+  color: #ddd;
+}
