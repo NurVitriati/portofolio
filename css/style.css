@@ -1,6 +1,4 @@
-/* HAPUS class ini kalau nggak dipakai */
 .navbar-container {
-  /* Bisa dihapus jika nav tidak dibungkus */
   display: none;
 }
 
@@ -9,7 +7,7 @@ nav {
   top: 0;
   right: 0;
   width: 100%;
-  background-color: #290036;
+  background-color: #002244;
   z-index: 1000;
   padding: 10px 30px;
 
@@ -32,7 +30,7 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-  color: #a472ff;
+  color: #66ccff;
 }
 
 .hamburger {
@@ -73,12 +71,12 @@ nav .nav-links a:hover {
 }
 body {
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #1a1a1a, #4b0082);
-  color: #f0f0f0;
+  background: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
+  color: #222;
 }
 
 header {
-  background: linear-gradient(to right, #000000, #4b0082);
+  background: linear-gradient(to right, #002244, #005288);
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -172,6 +170,52 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+#education {
+  padding: 50px 20px;
+}
+
+#education h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+  text-align: left;
+}
+
+.educations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.education-box {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+  text-align: justify;
+}
+
+.education-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.education-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.education-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .skills ul {
   list-style: none;
   display: flex;
@@ -214,8 +258,16 @@ nav a:hover {
 .project a:hover {
   text-decoration: underline;
 }
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
-  background: #1a1a1a;
+  background: #2e003e;
   color: white;
   text-align: center;
   padding: 20px;
@@ -254,47 +306,137 @@ footer {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
-.experience-section {
-  text-align: center;
+#experience {
   padding: 50px 20px;
+  color: #000;
+  max-width: 1100px; /* batasi lebar maksimal */
+  margin: 0 auto; /* center horizontal */
 }
 
-.experience-section h2 {
-  font-size: 25px;
+#experience h2 {
+  font-size: 26px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: left;
 }
 
 .experience-box-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center; /* Ini penting biar semua box ke tengah */
-  max-width: 900px;
-  margin: 0 auto;
+  flex-direction: column; /* satu kolom ke bawah */
 }
 
 .experience-box {
+  margin-bottom: 25px;
+  flex: 1 1 300px;
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 800px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+  text-align: justify;
 }
+
 .experience-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .experience-box h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
 }
 
 .experience-box p {
-  font-size: 15px;
-  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+#organization {
+  margin-top: 20px;
+  color: #000;
+}
+
+/* Judul besar */
+#organization h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Kotak organisasi */
+.organization-box {
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  color: #000;
+}
+
+/* Organisasi */
+.organization-box h3 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Deskripsi */
+.organization-box p {
+  margin: 4px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #333;
+}
+
+#organization {
+  padding: 50px 20px;
+}
+
+#organization h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+  text-align: left;
+}
+
+.organizations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.organization-box {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+  text-align: justify;
+}
+
+.organization-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.organization-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.organization-box p {
+  font-size: 16px;
+  line-height: 1.6;
 }
